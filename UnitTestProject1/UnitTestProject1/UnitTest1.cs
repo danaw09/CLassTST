@@ -17,7 +17,7 @@ namespace UnitTestProject1
             int actual;
             // act
             test.Add(10);
-            actual = test [0];
+            actual = test[0];
             // assert
             Assert.AreEqual(expected, actual);
         }
@@ -32,7 +32,7 @@ namespace UnitTestProject1
             string inputValue4 = "String 4";
             string inputValue5 = "String 5";
             string inputValue6 = "String 6";
-            int expected = 6;
+            int expected = "string 6";
             // act
             customlist.Add(inputValue1);
             customlist.Add(inputValue2);
@@ -40,7 +40,7 @@ namespace UnitTestProject1
             customlist.Add(inputValue4);
             customlist.Add(inputValue5);
             customlist.Add(inputValue6);
-            int actual = customlist[5];
+            int actual = 5;
 
 
             // assert
@@ -49,7 +49,7 @@ namespace UnitTestProject1
 
         }
         [TestMethod]
-        public void Custom_List_Adds_String_Checks_Count_For_One()
+        public void Adds_Count_For_One()
         {
             // arrange
             customList<int> List = new customList<int>();
@@ -66,29 +66,27 @@ namespace UnitTestProject1
 
         }
         [TestMethod]
-        public void Custom_List_Adds_String_Checks_Count_For_Three()
+        public void _Adds_Count_For_Three()
         {
             // arrange
-            customList<int> list = new customList<int>();
+            customList<int> customlist = new customList<int>();
             string inputValue1 = "String 1";
             string inputValue2 = "String 2";
             string inputValue3 = "String 3";
             int expectedCount = 3;
 
             // act
-            list.Add(inputValue1);
-            list.Add(inputValue2);
-            list.Add(inputValue3);
-            int actualCount = list.Count;
+            customlist.Add(inputValue1);
+            customlist.Add(inputValue2);
+            customlist.Add(inputValue3);
+            int actualCount = customlist.Count;
 
             // assert
             Assert.AreEqual(expectedCount, actualCount);
 
-        }
 
 
 
-
-}   }
+}   }   }
     
 
