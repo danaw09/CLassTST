@@ -17,10 +17,6 @@ namespace UnitClass
         public int Count { get; set; }
 
 
-
-
-        
-
         public void Add(int v)
         {
             if (objects.Length <= size)
@@ -35,4 +31,19 @@ namespace UnitClass
                 objects = tempArray;
             }
         }
+
+
+        public void Remove(int v)
+        {
+
+        }
+
+                
+
+
+
+
+
+
+
 }   }
