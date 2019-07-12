@@ -1,16 +1,18 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace UnitClass
 {
-    class CustomClass<T>
+    class CustomClass<T> 
     {
 
 
-
+        
 
         public T[] objects = new T[0];
         public int size { get; private set; }

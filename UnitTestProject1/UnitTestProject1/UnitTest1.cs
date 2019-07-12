@@ -73,16 +73,16 @@ namespace UnitTestProject1
             string inputValue1 = "String 1";
             string inputValue2 = "String 2";
             string inputValue3 = "String 3";
-            int expectedCount = 3;
+            int expected = 3;
 
             // act
             customlist.Add(inputValue1);
             customlist.Add(inputValue2);
             customlist.Add(inputValue3);
-            int actualCount = customlist.Count;
+            int actualC = customlist.Count;
 
             // assert
-            Assert.AreEqual(expectedCount, actualCount);
+            Assert.AreEqual(expected, actual);
 
 
 
