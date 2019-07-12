@@ -15,10 +15,11 @@ namespace UnitClass
         T[] array;
         private T value;
         int capacity;
+        private T[] newArray;
 
 
 
-        
+
         public int size { get; private set; }
         public int Count { get; set; }
 
@@ -66,30 +67,9 @@ namespace UnitClass
             }
         }
 
-        //public void Add(T value)
-        //{
-        //    if (objects.Length <= size)
-        //    {
-        //        T[] tempArray = new T[size + 1];
-        //        for (int i = 0; i < size; i++)
-        //        {
-        //            tempArray[i] = objects[i];
-        //        }
-        //        tempArray[size] = value;
-        //        size++;
-        //        objects = tempArray;
-        //    }
-        //}
-        public void Remove(string v)
+        
+        public void Remove( T value)
         {
-            //for (int i = 0; i < size; i++)
-            //{
-            //    if (objects[i].Equals(value))
-            //    {
-            //        object[i] = object[i + 1];
-
-            //    }
-            //}
 
 
 
@@ -102,5 +82,25 @@ namespace UnitClass
         {
             throw new NotImplementedException();
         }
+        public override string ToString()
+        {
+            string value = "";
+            for (int i = 0; i < size; i++)
+            {
+                value = objects[i].ToString();
+            }
+            return value;
+        }
+        public CustomClass<T> Zip(CustomClass<T> listA, CustomClass<T> listB)
+        {
+            CustomClass<T> list = new CustomClass<T>();
+            for (int i = 0; i < size; i++)
+            {
+                list.Add(listA.objects[i]);
+                list.Add(listB.objects[i]);
+            }
+            return list;
+        }
+      
     }
 }
