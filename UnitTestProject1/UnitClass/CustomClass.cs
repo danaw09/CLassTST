@@ -12,8 +12,6 @@ namespace UnitClass
     {
 
 
-        
-
         public T[] objects = new T[0];
         public int size { get; private set; }
 
