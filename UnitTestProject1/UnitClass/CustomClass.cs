@@ -8,17 +8,20 @@ using System.Threading.Tasks;
 
 namespace UnitClass
 {
-    public class CustomClass<T> 
+    public class CustomClass<T>
     {
-
-
         public T[] objects = new T[0];
-        public int Count;
+        private T value;
 
         public int size { get; private set; }
+        public int Count { get; set; }
 
 
-        public void Add(T value)
+
+
+        
+
+        public void Add(int v)
         {
             if (objects.Length <= size)
             {
@@ -32,5 +35,4 @@ namespace UnitClass
                 objects = tempArray;
             }
         }
-    }
-}
+}   }

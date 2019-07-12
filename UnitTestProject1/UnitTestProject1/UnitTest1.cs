@@ -94,7 +94,7 @@ namespace UnitTestProject1
             string inputValue2 = "two";
 
             int expected = 2;
-           
+
 
 
             // act
@@ -107,20 +107,27 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Adds_String_Checks_Count_For_One()
+        public void Add_Object_ToList()
         {
-            // arrange
-            CustomClass<string> customList = new CustomClass<string>();
-            string inputValue = " 1";
-            int expected = 1;
-            
-            // act
-            customList.Add(inputValue);
-            int actual = customList.Count;
-
-            // assert
-            Assert.AreEqual(expected, actual);
+            //Arrange
+            CustomClass<int> list = new CustomClass<int>();
+            //Act
+            list.Add(10);
+            //Assert
+            Assert.AreEqual(list.size, 10);
         }
+
+        [TestMethod]
+        public void Add_OneObject_ToList()
+        {
+            //Arrange
+            CustomClass<int> list = new CustomClass<int>();
+            //Act
+            list.Add(1);
+            //Assert
+            Assert.AreEqual(list.size, 1);
+        }
+
 
     }
 
