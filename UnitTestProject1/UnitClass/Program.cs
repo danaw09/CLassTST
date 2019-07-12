@@ -10,7 +10,7 @@ namespace UnitClass
     {
         static void Main(string[] args)
         {
-            //customList<int> test = new customList<int>();
+            CustomClass<string> customList = new CustomClass<string>();
         }
     }
 }

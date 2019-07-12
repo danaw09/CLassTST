@@ -8,11 +8,11 @@ namespace UnitTestProject1
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
+
         public void Add_AddToEmptyList_ValueGoesToIndexZero()
         {
             // arrange
-            customList<int> test = new customList<int>();
+            CustomClass<int> test = new CustomClass<int>();
             int expected = 10;
             int actual;
             // act
@@ -25,21 +25,21 @@ namespace UnitTestProject1
         [TestMethod]
         public void Add_Two_classes_For_Six_Values()
         {
-            customList<int> customlist = new customList<int>();
+            CustomClass<string> CustomClass = new CustomClass<string>();
             string inputValue1 = "1";
             string inputValue2 = "String 2";
             string inputValue3 = "String 3";
             string inputValue4 = "String 4";
             string inputValue5 = "String 5";
             string inputValue6 = "String 6";
-            int expected = "string 6";
+            string expected = "String 6";
             // act
-            customlist.Add(inputValue1);
-            customlist.Add(inputValue2);
-            customlist.Add(inputValue3);
-            customlist.Add(inputValue4);
-            customlist.Add(inputValue5);
-            customlist.Add(inputValue6);
+            CustomClass.Add(inputValue1);
+            CustomClass.Add(inputValue2);
+            CustomClass.Add(inputValue3);
+            CustomClass.Add(inputValue4);
+            CustomClass.Add(inputValue5);
+            CustomClass.Add(inputValue6);
             int actual = 5;
 
 
@@ -52,10 +52,10 @@ namespace UnitTestProject1
         public void Adds_Count_For_One()
         {
             // arrange
-            customList<int> List = new customList<int>();
+            CustomClass<string> List = new CustomClass<string>();
             string inputValue = "String 1";
             int expected = 1;
-            
+
 
             // act
             List.Add(inputValue);
@@ -69,24 +69,61 @@ namespace UnitTestProject1
         public void _Adds_Count_For_Three()
         {
             // arrange
-            customList<int> customlist = new customList<int>();
+            CustomClass<string> CustomClass = new CustomClass<string>();
             string inputValue1 = "String 1";
             string inputValue2 = "String 2";
             string inputValue3 = "String 3";
             int expected = 3;
 
             // act
-            customlist.Add(inputValue1);
-            customlist.Add(inputValue2);
-            customlist.Add(inputValue3);
-            int actualC = customlist.Count;
+            CustomClass.Add(inputValue1);
+            CustomClass.Add(inputValue2);
+            CustomClass.Add(inputValue3);
+            int actual = CustomClass.Count;
 
             // assert
             Assert.AreEqual(expected, actual);
 
+        }
+        [TestMethod]
+        public void _Adds_Count_For_Two()
+        {
+            // arrange
+            CustomClass<string> customList = new CustomClass<string>();
+            string inputValue1 = "one";
+            string inputValue2 = "two";
+
+            int expected = 2;
+           
 
 
+            // act
+            customList.Add(inputValue1);
+            customList.Add(inputValue2);
 
-}   }   }
+            int actual = customList.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Adds_String_Checks_Count_For_One()
+        {
+            // arrange
+            CustomClass<string> customList = new CustomClass<string>();
+            string inputValue = " 1";
+            int expected = 1;
+            
+            // act
+            customList.Add(inputValue);
+            int actual = customList.Count;
+
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
+    }
+
+}   
     
 

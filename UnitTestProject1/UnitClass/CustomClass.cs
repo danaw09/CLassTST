@@ -8,11 +8,13 @@ using System.Threading.Tasks;
 
 namespace UnitClass
 {
-    class CustomClass<T> 
+    public class CustomClass<T> 
     {
 
 
         public T[] objects = new T[0];
+        public int Count;
+
         public int size { get; private set; }
 
 
