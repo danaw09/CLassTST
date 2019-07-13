@@ -90,11 +90,11 @@ namespace UnitTestProject1
 
         }
         [TestMethod]
-        public void Convert_DataTypes_ToString()
+        public void Convert_ToString()
         {
             //Arrange
             CustomClass<int> list = new CustomClass<int>();
-            list.Add(10);
+            list.Add(5);
             //Act
             string result = list.ToString();
             //Assert

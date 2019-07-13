@@ -16,9 +16,7 @@ namespace UnitClass
         private T value;
         int capacity;
         private T[] newArray;
-
-
-
+        
 
         public int size { get; private set; }
         public int Count { get; set; }
@@ -51,6 +49,7 @@ namespace UnitClass
                 array[i] = value;
             }
         }
+
 
         public void Add(T value)
         {
@@ -108,6 +107,43 @@ namespace UnitClass
             }
             return list;
         }
-      
+
+        public CustomClass<string> Zip(CustomClass<int> list, CustomClass<string> secondList)
+        {
+            throw new NotImplementedException();
+        }
+
+         public static CustomClass<T> operator + (CustomClass<T> listA, CustomClass<T> listB)
+        {
+            CustomClass<T > list = new CustomClass<T>();
+            foreach(T item in listA)
+            {
+                list.Add(item);
+            }
+            foreach(T item in listB)
+            {
+                list.Add(item);
+            }
+            return list;
+        }
+
+        public static CustomClass<T> operator - (CustomClass<T> listA, CustomClass<T> listB)
+        {
+            CustomClass<T> list = new CustomClass<T>();
+            foreach (T item in listA)
+            {
+                list.Add(item);
+            }
+            foreach (T item in listB)
+            {
+                list.Add(item);
+            }
+            return list;
+        }
+
+
+
+
+
     }
 }
