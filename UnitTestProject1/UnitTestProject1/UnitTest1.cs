@@ -96,9 +96,9 @@ namespace UnitTestProject1
             CustomClass<int> list = new CustomClass<int>();
             list.Add(5);
             //Act
-            string result = list.ToString();
+            string expect = list.ToString();
             //Assert
-            Assert.AreEqual(result, "5");
+            Assert.AreEqual(expect, "5");
         }
 
         [TestMethod]

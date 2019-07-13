@@ -88,6 +88,9 @@ namespace UnitClass
                 yield return this[i];
             }
         }
+
+
+
         public override string ToString()
         {
             string value = "";
@@ -97,6 +100,10 @@ namespace UnitClass
             }
             return value;
         }
+
+
+
+
         public CustomClass<T> Zip(CustomClass<T> listA, CustomClass<T> listB)
         {
             CustomClass<T> list = new CustomClass<T>();
@@ -107,6 +114,8 @@ namespace UnitClass
             }
             return list;
         }
+
+
 
         public CustomClass<string> Zip(CustomClass<int> list, CustomClass<string> secondList)
         {

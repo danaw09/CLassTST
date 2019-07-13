@@ -17,6 +17,16 @@ namespace UnitClass
             customList.Add(4);
             customList.Add(5);
             customList.Remove(1);
+
+
+            foreach (int number in customList)
+            {
+               Console.WriteLine(number);
+            }
+                Console.ReadKey();
         }
+
+
+
     }
 }
