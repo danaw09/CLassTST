@@ -89,6 +89,17 @@ namespace UnitTestProject1
             Assert.AreEqual(list.size, 6);
 
         }
+        [TestMethod]
+        public void Convert_DataTypes_ToString()
+        {
+            //Arrange
+            CustomClass<int> list = new CustomClass<int>();
+            list.Add(10);
+            //Act
+            string result = list.ToString();
+            //Assert
+            Assert.AreEqual(result, "10");
+        }
 
     }
 }
