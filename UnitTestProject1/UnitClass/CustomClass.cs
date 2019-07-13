@@ -127,19 +127,7 @@ namespace UnitClass
             return list;
         }
 
-        public static CustomClass<T> operator - (CustomClass<T> listA, CustomClass<T> listB)
-        {
-            CustomClass<T> list = new CustomClass<T>();
-            foreach (T item in listA)
-            {
-                list.Add(item);
-            }
-            foreach (T item in listB)
-            {
-                list.Add(item);
-            }
-            return list;
-        }
+
 
 
 

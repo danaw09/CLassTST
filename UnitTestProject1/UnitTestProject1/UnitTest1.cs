@@ -98,7 +98,7 @@ namespace UnitTestProject1
             //Act
             string result = list.ToString();
             //Assert
-            Assert.AreEqual(result, "10");
+            Assert.AreEqual(result, "5");
         }
 
         [TestMethod]
@@ -126,7 +126,28 @@ namespace UnitTestProject1
             //Assert
             Assert.IsTrue(compare);
         }
-    
+
+
+        [TestMethod]
+        public void Zip_Lists_ReturnZippedList()
+        {
+            //Arrange
+            CustomClass<string> list = new CustomClass<string>() { "string1", "string2" };
+            CustomClass<string> secondList = new CustomClass<string>() { "string3", "string4" };
+            CustomClass<string>  actual = new CustomClass<string> () { "string1", "string2", "string3", "string4" };
+            //Act
+            CustomClass<string> result = list.Zip(list, secondList);
+            bool compare = true;
+            for (int i = 0; i < list.size; i++)
+            {
+                if (result.objects[i] != actual.objects[i])
+                {
+                    compare = false;
+                }
+            }
+            //Assert
+            Assert.IsTrue(compare);
+        }
 
 
 
