@@ -101,6 +101,36 @@ namespace UnitTestProject1
             Assert.AreEqual(result, "10");
         }
 
+        [TestMethod]
+        public void _Check_For_Overloading_Plus_Operator()
+        {
+
+            //Arrange
+            CustomClass<string> list = new CustomClass<string>();
+            CustomClass<string> actualResult = new CustomClass<string>() { "string1", "string2", "string3", "string4" };
+            list.Add("string1");
+            list.Add("string2");
+            CustomClass<string> secondList = new CustomClass<string>();
+            secondList.Add("string3");
+            secondList.Add("string4");
+            bool compare = true;
+            for (int i = 0; i < list.size; i++)
+            {
+                if (list.objects[i] != actualResult.objects[i])
+                {
+                    compare = false;
+                }
+            }
+            //Act
+            CustomClass<string> result = (list + secondList);
+            //Assert
+            Assert.IsTrue(compare);
+        }
+    
+
+
+
+
     }
 }
 
