@@ -10,7 +10,13 @@ namespace UnitClass
     {
         static void Main(string[] args)
         {
-            CustomClass<string> customList = new CustomClass<string>();
+            CustomClass<int> customList = new CustomClass<int>();
+            customList.Add(1);
+            customList.Add(2);
+            customList.Add(3);
+            customList.Add(4);
+            customList.Add(5);
+            customList.Remove(1);
         }
     }
 }
