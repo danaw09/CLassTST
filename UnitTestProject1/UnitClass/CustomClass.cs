@@ -15,12 +15,12 @@ namespace UnitClass
         T[] array;
         private T value;
         int capacity;
-        private T[] newArray;
+        int index;
 
 
         public int size { get; private set; }
         public int Count { get; set; }
-
+       
         public CustomClass()
         {
             int capacity = 5;
@@ -38,6 +38,17 @@ namespace UnitClass
             }
         }
 
+        public int Index
+        {
+            get
+            {
+                return index;
+            }
+            set
+            {
+                index = value;
+            }
+        }
         public T this[int i]
         {
             get
@@ -117,10 +128,7 @@ namespace UnitClass
 
 
 
-        public CustomClass<string> Zip(CustomClass<int> list, CustomClass<string> secondList)
-        {
-            throw new NotImplementedException();
-        }
+      
 
         public static CustomClass<T> operator +(CustomClass<T> listA, CustomClass<T> listB)
         {

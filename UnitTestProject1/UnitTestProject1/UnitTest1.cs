@@ -89,7 +89,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void _Check_For_Overloading_Plus_Operator()
+        public void _Overloading_Plus_Operator()
         {
 
             //Arrange
@@ -134,15 +134,6 @@ namespace UnitTestProject1
             }
             //Assert
             Assert.IsTrue(compare);
-
-        }
-
-
-
-
-        [TestMethod]
-        public void Overloading_PlusOperator()
-        {
 
         }
 
