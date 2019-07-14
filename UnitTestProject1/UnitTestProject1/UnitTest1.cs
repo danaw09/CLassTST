@@ -21,19 +21,6 @@ namespace UnitTestProject1
         //    Assert.AreSame(customclass[0], inputValue)
         //}
 
-        //[TestMethod]
-        //public void Remove_An_Object()
-        //{
-        //   // Arrange
-        //    CustomClass<string> list = new CustomClass<string>();
-        //    list.Add("string1");
-        //    list.Add("string2");
-        //    list.Add("string3");
-        //   // act
-        //    list.Remove("string1");
-        //   // Assert
-        //    Assert.AreEqual(list.size, 2);
-        //}
         [TestMethod]
         public void Remove_Another_Object()
         {
