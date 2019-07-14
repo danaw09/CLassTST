@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace UnitClass
 {
-    public class CustomClass<T> :IEnumerable<T>
+    public class CustomClass<T> : IEnumerable<T>
     {
-        
+
         public T[] objects = new T[0];
         T[] array;
         private T value;
         int capacity;
         private T[] newArray;
-        
+
 
         public int size { get; private set; }
         public int Count { get; set; }
@@ -25,7 +25,7 @@ namespace UnitClass
         {
             int capacity = 5;
             T[] objects = new T[capacity];
-    }
+        }
         public int Capacity
         {
             get
@@ -66,8 +66,8 @@ namespace UnitClass
             }
         }
 
-        
-        public void Remove( T value)
+
+        public void Remove(T value)
         {
 
 
@@ -122,25 +122,38 @@ namespace UnitClass
             throw new NotImplementedException();
         }
 
-         public static CustomClass<T> operator + (CustomClass<T> listA, CustomClass<T> listB)
+        public static CustomClass<T> operator +(CustomClass<T> listA, CustomClass<T> listB)
         {
-            CustomClass<T > list = new CustomClass<T>();
-            foreach(T item in listA)
+            CustomClass<T> list = new CustomClass<T>();
+            foreach (T item in listA)
             {
                 list.Add(item);
             }
-            foreach(T item in listB)
+            foreach (T item in listB)
             {
                 list.Add(item);
             }
             return list;
         }
 
+        public static CustomClass<T> operator -(CustomClass<T> listA, CustomClass<T> listB)
+        {
+            CustomClass<T> list = new CustomClass<T>();
+            foreach (T item in listA)
+            {
+                list.Remove(item);
+            }
+            foreach (T item in listB)
+            {
+                list.Remove(item);
+            }
+            return list;
 
 
 
 
 
 
-    }
-}
+
+        }
+}   }
