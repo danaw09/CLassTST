@@ -12,7 +12,7 @@ namespace UnitClass
     {
 
         public T[] objects = new T[0];
-        T[] array;
+        private T[] array;
         private T value;
         int capacity;
         int index;
@@ -82,8 +82,10 @@ namespace UnitClass
         {
             if (objects.Length <= size)
             {
-               
+
             }
+            
+                
 
 
         }
