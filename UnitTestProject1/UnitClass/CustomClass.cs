@@ -80,7 +80,10 @@ namespace UnitClass
 
         public void Remove(T value)
         {
-
+            if (objects.Length <= size)
+            {
+               
+            }
 
 
         }
