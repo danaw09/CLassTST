@@ -16,7 +16,7 @@ namespace UnitClass
         private T value;
         int capacity;
         int index;
-
+        
 
         public int size { get; private set; }
         public int Count { get; set; }
@@ -81,8 +81,12 @@ namespace UnitClass
         public void Remove(T value)
         {
             if (objects.Length <= size)
-            {
-
+            {   
+                T[] tempArray = new T[size + 1];
+                for (int i = 0; i < size; i++)
+                {
+                    tempArray[i] = objects[i];
+                }
             }
             
                 
